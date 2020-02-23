@@ -26,6 +26,17 @@ public class HomePage extends WebElementHomePage {
     public static void doSignUpButton() {
         getSignUpButton().click();
     }
-
+    @FindBy(how = How.XPATH, using = WebElementHomePage.webelementEmailBox)
+    public static WebElement EmailBox;
+    public static WebElement getEmailBox() {return EmailBox;}
+    public static void doEmailBox(String value) {
+       getEmailBox().sendKeys(value);
+    }
+   @FindBy(how = How.CLASS_NAME,using = WebElementHomePage.webelementContinuousButton)
+    public static WebElement ContinuousButton;
+    public static WebElement getContinuousButton() {return ContinuousButton;}
+    public static void doContinuousButton() {
+        getContinuousButton().click();
+    }
 
 }

@@ -16,4 +16,22 @@ public class TestHomePage extends HomePage {
         doSignUpButton();
         sleepFor(2);
 }
+@Test(priority = 2)
+    public void testDoEmailBox() throws InterruptedException {
+        getInItElements();
+        doSignUpButton();
+        sleepFor(2);
+        doEmailBox("9133063116");
+        sleepFor(2);
+}
+@Test(priority = 3)
+    public void testDoContinuousButton() throws InterruptedException {
+        getInItElements();
+        doSignUpButton();
+        sleepFor(2);
+        doEmailBox("9133063116");
+        sleepFor(2);
+        doContinuousButton();
+        sleepFor(2);
+}
 }
