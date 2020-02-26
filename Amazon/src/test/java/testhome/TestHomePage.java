@@ -34,4 +34,29 @@ public class TestHomePage extends HomePage {
         doContinuousButton();
         sleepFor(2);
 }
+@Test(priority = 4)
+    public void testDoENButton() throws InterruptedException {
+        getInItElements();
+        doENButton();
+        sleepFor(2);
+}
+    @Test(priority = 4)
+    public void testDoCheckButton() throws InterruptedException {
+        getInItElements();
+        doENButton();
+        sleepFor(2);
+        doCheckButton();
+        sleepFor(2);
+    }
+    @Test(priority = 4)
+    public void testDoSaveChangesButton() throws InterruptedException {
+        getInItElements();
+        doENButton();
+        sleepFor(2);
+        doCheckButton();
+        sleepFor(2);
+        doSaveChangesButton();
+        sleepFor(2);
+    }
+
 }

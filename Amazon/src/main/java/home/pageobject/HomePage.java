@@ -38,5 +38,23 @@ public class HomePage extends WebElementHomePage {
     public static void doContinuousButton() {
         getContinuousButton().click();
     }
+    @FindBy(how = How.XPATH, using = WebElementHomePage.webElementENButton)
+    public static WebElement ENButton;
+    public static WebElement getENButton() {return ENButton;}
+    public static void doENButton() {
+        getENButton().click();
+    }
+    @FindBy(how = How.XPATH, using = WebElementHomePage.webElementCheckButton)
+    public static WebElement CheckButton;
+    public static WebElement getCheckButton() {return CheckButton;}
+    public static void doCheckButton() {
+        getCheckButton().click();
+    }
+    @FindBy(how = How.XPATH, using = WebElementHomePage.webElementSaveChangesButton)
+    public static WebElement SaveChangesButton;
+    public static WebElement getSaveChangesButton() {return SaveChangesButton;}
+    public static void doSaveChangesButton() {
+        getSaveChangesButton().click();
+    }
 
 }
