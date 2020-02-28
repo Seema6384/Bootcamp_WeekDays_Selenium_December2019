@@ -2,6 +2,7 @@ package testhome;
 
 import home.pageobject.HomePage;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestHomePage extends HomePage {
@@ -58,5 +59,100 @@ public class TestHomePage extends HomePage {
         doSaveChangesButton();
         sleepFor(2);
     }
-
+    @Test(priority = 5)
+    public void testDoSearchBox() throws InterruptedException {
+        getInItElements();
+        doSearchBox("mobile phone");
+        sleepFor(2);
+    }
+    @Test(priority = 6)
+    public void testDoSearchButton() throws InterruptedException {
+        getInItElements();
+        doSearchBox("mobile phone");
+        sleepFor(2);
+        doSearchButton();
+        sleepFor(2);
+    }
+    @Test(priority = 7)
+    public void testDoHoverTryPrimeButton() throws InterruptedException {
+        getInItElements();
+        doHoverTryPrimeButton();
+        sleepFor(2);
+    }
+    @Test(priority = 8)
+    public void testDoHoverAccountAndList() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+    }
+    @Test(priority = 9)
+    public void testDoClickStartHere() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+        doHoverStartHere();
+        sleepFor(2);
+    }
+    @Test(priority = 10)
+    public void testDoPutYourName() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+        doHoverStartHere();
+        sleepFor(2);
+        doPutYourName("abc");
+    }
+    @Test(priority = 11)
+    public void testDoPutEmail() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+        doHoverStartHere();
+        sleepFor(2);
+        doPutYourName("abc");
+        sleepFor(2);
+        doPutEmail("abc@gmail.com");
+    }
+    @Test(priority = 12)
+    public void testDoPutPassword() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+        doHoverStartHere();
+        sleepFor(2);
+        doPutYourName("abc");
+        sleepFor(2);
+        doPutEmail("abc@gmail.com");
+        sleepFor(2);
+        doPutPassword("abcdef");
+    }
+    @Test(priority = 13)
+    public void testDoPutReEnteredPassword() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+        doHoverStartHere();
+        sleepFor(2);
+        doPutYourName("abc");
+        sleepFor(2);
+        doPutEmail("abc@gmail.com");
+        sleepFor(2);
+        doPutReEnteredPassword("abcdef");
+        sleepFor(2);
+    }
+    @Test(priority = 14)
+    public void testDoClickCreateYourAmazonAccount() throws InterruptedException {
+        getInItElements();
+        doHoverAccountAndList();
+        sleepFor(2);
+        doHoverStartHere();
+        sleepFor(2);
+        doPutYourName("abc");
+        sleepFor(2);
+        doPutEmail("abc@gmail.com");
+        sleepFor(2);
+        doPutReEnteredPassword("abcdef");
+        sleepFor(2);
+        doClickCreateYourAmazonAccount();
+    }
 }
